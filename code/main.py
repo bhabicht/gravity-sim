@@ -1,10 +1,12 @@
 import numpy as np
+import plotting
+
 import leap_frog_algorithm
 
 
 delta_t = 60*60*24 #a day in seconds
 
-nsteps=1000
+nsteps=100
 '''
 initialize the vectors that will store position and velocities of the objects
 the first index stores the values as function of the time, the second as a
@@ -15,4 +17,4 @@ v=np.zeros((nsteps,len(leap_frog_algorithm.massive_objects),3))
 
 # now do all the calculation and plotting
 leap_frog_algorithm.leapfrog_nsteps(nsteps, delta_t, x, v)
-plot(x,y)
+plotting.plot(x)
