@@ -1,3 +1,6 @@
+import numpy as np
+
+
 class Massiveobject(object):
     """
     This class should represent the sun or a planet or a rocket.
