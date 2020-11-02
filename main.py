@@ -1,7 +1,7 @@
 import numpy as np
 
-from code.plotting import plot3D
-from code.leap_frog_algorithm import leapfrog_nsteps, massive_objects
+from Code.plotting import plot3D
+from Code.leap_frog_algorithm import leapfrog_nsteps, massive_objects
 
 
 delta_t = 60*60*24 #a day in seconds

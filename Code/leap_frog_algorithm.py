@@ -1,7 +1,7 @@
 import numpy as np
 
-from code.planet_system_creation import sun, mercury, venus, earth, mars
-from code.physical_functions import gravforce
+from Code.planet_system_creation import sun, mercury, venus, earth, mars
+from Code.physical_functions import gravforce
 
 """
 implementation of leap frog algorithm

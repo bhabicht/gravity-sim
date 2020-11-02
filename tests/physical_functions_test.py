@@ -1,6 +1,9 @@
 import unittest
-from justgrav import gravpot
 import scipy.constants as const
+#from justgrav import gravpot
+import sys
+sys.path.append('/home/benjamin/Documents/computer_science/gravity-sim')
+from Code.physical_functions import gravpot
 
 class PotentialEnergyTestCase(unittest.TestCase):
 
