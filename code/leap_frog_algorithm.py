@@ -1,7 +1,7 @@
 import numpy as np
 
-import planet_system_creation
-import physical_functions
+from code.planet_system_creation import sun, mercury, venus, earth, mars
+from code.physical_functions import gravforce
 
 """
 implementation of leap frog algorithm
@@ -17,8 +17,7 @@ start with just 3 objects and calculate the trajectories
 
 #massive_objects = [sun, mercury, venus, earth, mars, jupiter, saturn, uranus,
 #                   neptune, pluto]
-massive_objects = [planet_system_creation.sun, planet_system_creation.mercury, 
-    planet_system_creation.venus, planet_system_creation.earth, planet_system_creation.mars]
+massive_objects = [sun, mercury, venus, earth, mars]
 # 1. update all positions
 def update_all_positions(delta_t):
     """
@@ -42,7 +41,7 @@ def calculate_all_forces(delta_t):
         m_obj1.F = np.zeros(3)
         for m_obj2 in massive_objects:
             if(m_obj2!=m_obj1):
-                m_obj1.F += physical_functions.gravforce(m_obj1.x, m_obj2.x, m_obj1.mass, 
+                m_obj1.F += gravforce(m_obj1.x, m_obj2.x, m_obj1.mass, 
                                       m_obj2.mass)
 
 # 3. calculate new velocities

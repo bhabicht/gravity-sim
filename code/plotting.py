@@ -3,7 +3,7 @@ from itertools import cycle
 from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
 
-def plot(x):
+def plot3D(x):
     cycol = cycle('bgrcmk')
     fig = plt.figure()
     ax = Axes3D(fig)
