@@ -1,5 +1,5 @@
 # gravity-sim
-Programming project to improve software engineering skills
+Programming project to improve software engineering skills  
 Contents:
 1. UML
 2. git
