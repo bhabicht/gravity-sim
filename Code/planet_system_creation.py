@@ -2,8 +2,7 @@ import numpy as np
 
 
 class Massiveobject(object):
-    """
-    This class should represent the sun or a planet or a rocket.
+    """This class should represent the sun or a planet or a rocket.
     It has 4 attributes, name, mass, position x, starting velocity v. 
     The last 3 parameters are necessary to solve the differential equation
     which governs the motion of the planets.
