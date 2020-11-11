@@ -24,7 +24,7 @@ def update_all_positions(delta_t, selected_objects):
         m_obj.x = m_obj.x + m_obj.v * delta_t/2
         
 # 2. calculate the force acting on each massive object
-def calculate_all_forces(delta_t, selected_objects):
+def calculate_all_forces(selected_objects):
     """
     This function updates the forces as a function of the new positions.
     We need the second loop to sum up all the forces that act upon the object
@@ -36,7 +36,7 @@ def calculate_all_forces(delta_t, selected_objects):
     for m_obj1 in selected_objects:
         m_obj1.F = np.zeros(3)
         for m_obj2 in selected_objects:
-            if(m_obj2!=m_obj1):
+            if(m_obj2 != m_obj1):
                 m_obj1.F += gravforce(m_obj1.x, m_obj2.x, m_obj1.mass, 
                                       m_obj2.mass)
 
@@ -56,7 +56,7 @@ def leapfrog_nsteps(nsteps, delta_t, selected_objects, x, v):
     for i in range(nsteps):
         j=0
         update_all_positions(delta_t, selected_objects)
-        calculate_all_forces(delta_t, selected_objects)
+        calculate_all_forces(selected_objects)
         update_all_velocities(delta_t, selected_objects)
         update_all_positions(delta_t, selected_objects)
         for m_obj in selected_objects:
