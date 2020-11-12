@@ -2,12 +2,15 @@ import numpy as np
 
 
 class Massiveobject(object):
-    """This class should represent the sun or a planet or a rocket.
+    """Representation of a physical object
+    
+    This class should represent the sun or a planet or a rocket.
     It has 4 attributes, name, mass, position x, starting velocity v.
     The last 3 parameters are necessary to solve the differential equation
     which governs the motion of the planets.
     """
     def __init__(self, name, mass, x, v, F):
+        """Set values for name, mass, place, velocity and force"""
         self.name = name
         self.mass = mass
         self.x = x
@@ -30,7 +33,7 @@ venus = Massiveobject("venus", 4.8685E24, np.array([1.076209595805564E11,
     np.array([-2.693485084259549E3,3.476650462014290E4,6.320912271467272E2]),
     np.zeros(3) )
 earth = Massiveobject("earth", 5.97219E24,
-    np.array([-2.54532370827383E10,1.460913442868109E11,-2.726527903765440E6]), 
+    np.array([-2.54532370827383E10,1.460913442868109E11,-2.726527903765440E6]),
     np.array([-2.98633820023531E4,-5.165822246700293E3,1.135526860257752]),
     np.zeros(3))
 mars = Massiveobject("mars", 6.4171E23,
@@ -42,7 +45,7 @@ jupiter = Massiveobject("jupiter", 1.898E27,  np.array([7.814223897437210E10,
     np.array([1.284045160909457E4,1.930274035308634E3,-2.952516344902680E2]),
     np.zeros(3))
 saturn = Massiveobject("saturn", 5.683E26,  np.array([5.674911817149432E11,
-    -1.388366420433696E12,1.549271510988116E+09]),  
+    -1.388366420433696E12,1.549271510988116E+09]),
     np.array([8.406314420691997E3,3.626623210585119E+3,-3.977556551929139E2]),
     np.zeros(3) )
 uranus = Massiveobject("uranus", 8.681E25,  np.array([2.426731547813749E12,
