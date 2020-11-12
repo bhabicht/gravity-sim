@@ -2,18 +2,6 @@ import numpy as np
 
 from Code.physical_functions import gravforce
 
-"""
-implementation of leap frog algorithm
-start with just 3 objects and calculate the trajectories
-1. update all positions
-2. calculate force with new positions
-3. calculate new velocities
-4. update all positions again
-5. repeat
-6. ...
-7. profit!
-"""
-
 # 1. update all positions
 def update_all_positions(delta_t, selected_objects):
     """
@@ -37,7 +25,7 @@ def calculate_all_forces(selected_objects):
         m_obj1.F = np.zeros(3)
         for m_obj2 in selected_objects:
             if(m_obj2 != m_obj1):
-                m_obj1.F += gravforce(m_obj1.x, m_obj2.x, m_obj1.mass, 
+                m_obj1.F += gravforce(m_obj1.x, m_obj2.x, m_obj1.mass,
                                       m_obj2.mass)
 
 # 3. calculate new velocities
@@ -50,7 +38,7 @@ def update_all_velocities(delta_t, selected_objects):
         
 def leapfrog_nsteps(nsteps, delta_t, selected_objects, x, v):
     """
-    Put all 4 steps into a function, that also stores the position and 
+    Put all 4 steps into a function, that also stores the position and
     velocities vectors of all objects and for every time step
     """
     for i in range(nsteps):
