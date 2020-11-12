@@ -2,15 +2,16 @@ import numpy as np
 
 
 class Massiveobject(object):
-    """Representation of a physical object
-    
+    """
+    Representation of a physical object
+
     This class should represent the sun or a planet or a rocket.
     It has 4 attributes, name, mass, position x, starting velocity v.
     The last 3 parameters are necessary to solve the differential equation
     which governs the motion of the planets.
     """
     def __init__(self, name, mass, x, v, F):
-        """Set values for name, mass, place, velocity and force"""
+        """Set values for name, mass, place, velocity and force."""
         self.name = name
         self.mass = mass
         self.x = x

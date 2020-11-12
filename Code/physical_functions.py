@@ -3,8 +3,9 @@ import scipy.constants as const
 
 
 def gravforce(x1,x2,m1,m2):
-    """Calculate the gravitational force
-    
+    """
+    Calculate the gravitational force
+
     This function returns the value of the gravitational force, in SI units,
     acting on the first object and caused by the second object, using
     newton's law of gravitation and newton's 2nd law of motion. I.e. we ignore

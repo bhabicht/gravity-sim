@@ -1,1 +1,1 @@
-"""Functionality for the gravity simulation program"""
+"""Functionality for the gravity simulation program."""

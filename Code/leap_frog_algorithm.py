@@ -4,7 +4,8 @@ from Code.physical_functions import gravforce
 
 # 1. update all positions
 def update_all_positions(delta_t, selected_objects):
-    """Update the coordinates
+    """
+    Update the coordinates
 
     This function updates all the positions, with a euler step using half of
     the step size.
@@ -14,8 +15,9 @@ def update_all_positions(delta_t, selected_objects):
 
 # 2. calculate the force acting on each massive object
 def calculate_all_forces(selected_objects):
-    """Calculate sum of all forces
-    
+    """
+    Calculate sum of all forces
+
     This function updates the forces as a function of the new positions.
     We need the second loop to sum up all the forces that act upon the object
     given by the first loop. We need the if statement to prohibit that we
@@ -32,12 +34,13 @@ def calculate_all_forces(selected_objects):
 
 # 3. calculate new velocities
 def update_all_velocities(delta_t, selected_objects):
-    """This function updates all the velocities."""
+    """Update all the velocities."""
     for m_obj in selected_objects:
         m_obj.v = m_obj.v + m_obj.F/m_obj.mass * delta_t
         
 def leapfrog_nsteps(nsteps, delta_t, selected_objects, x, v):
-    """Execute n steps of the leapfrog algorithm
+    """
+    Execute n steps of the leapfrog algorithm
 
     Put all 4 steps into a function, that also stores the position and
     velocities vectors of all objects and for every time step
