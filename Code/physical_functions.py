@@ -11,7 +11,7 @@ def gravforce(x1,x2,m1,m2):
     newton's law of gravitation and newton's 2nd law of motion. I.e. we ignore
     relativistic effects (relevant for the apsidal precession of e.g. mercury).
     Input values are the positions of the 2 object in cartesian coordinates and
-    the masses of the objects.
+    the masses of the objects
     """
     if np.array_equal(x1, x2):
         raise ValueError("Division by 0 Error")

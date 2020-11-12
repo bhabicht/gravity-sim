@@ -8,7 +8,7 @@ def update_all_positions(delta_t, selected_objects):
     Update the coordinates.
 
     This function updates all the positions, with a euler step using half of
-    the step size.
+    the step size
     """
     for m_obj in selected_objects:
         m_obj.x = m_obj.x + m_obj.v * delta_t/2

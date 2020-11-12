@@ -8,7 +8,7 @@ class Massiveobject(object):
     This class should represent the sun or a planet or a rocket.
     It has 4 attributes, name, mass, position x, starting velocity v.
     The last 3 parameters are necessary to solve the differential equation
-    which governs the motion of the planets.
+    which governs the motion of the planets
     """
     def __init__(self, name, mass, x, v, F):
         """Set values for name, mass, place, velocity and force."""
