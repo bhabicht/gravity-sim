@@ -3,7 +3,7 @@ import numpy as np
 
 class Massiveobject(object):
     """
-    Representation of a physical object
+    Representation of a physical object.
 
     This class should represent the sun or a planet or a rocket.
     It has 4 attributes, name, mass, position x, starting velocity v.
