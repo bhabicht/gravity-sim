@@ -31,5 +31,4 @@ jobs:
         pip install coverage
         coverage run --source=. -m unittest discover -s tests -p '*_test.py'
         coverage xml
-        export CODACY_PROJECT_TOKEN=d1f6e6782b3e491ab28d2d47699b646e
         bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage.xml
