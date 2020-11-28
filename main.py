@@ -8,7 +8,7 @@ from Code.planet_system_creation import sun, mercury, venus, earth, mars
 delta_t = 60*60*24 #a day in seconds
 selected_objects = [sun, mercury, venus, earth, mars]
 
-nsteps=100
+nsteps=100 #simulated time interval: nsteps*delta_t = 100 days
 '''
 initialize the vectors that will store position and velocities of the objects
 the first index stores the values as function of the time, the second as a
