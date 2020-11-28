@@ -27,9 +27,11 @@ jobs:
     - name: Test code
       run: python -m unittest discover -s tests -p '*_test.py'
     - name: Upload test coverage
+      env: 
+        api_token: ${{ secrets.CODACY_API_TOKEN }}
       run: |
         pip install coverage
         coverage run --source=. -m unittest discover -s tests -p '*_test.py'
         coverage xml
-        export CODACY_API_BASE_URL=${{ secrets.CODACY_API_TOKEN }}
+        export CODACY_API_BASE_URL=api_token
         bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage.xml
