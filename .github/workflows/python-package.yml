@@ -31,5 +31,5 @@ jobs:
         pip install coverage
         coverage run --source=. -m unittest discover -s tests -p '*_test.py'
         coverage xml
-        export CODACY_API_BASE_URL=${{ CODACY_API_BASE_URL }}
+        export CODACY_API_BASE_URL=$CODACY_API_BASE_URL
         bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage.xml
