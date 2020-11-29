@@ -1,7 +1,7 @@
 import unittest
 import sys
 
-from Code.planet_system_creation import Massiveobject
+from code.planet_system_creation import Massiveobject
 
 sys.path.append('/home/benjamin/Documents/computer_science/gravity-sim')
 

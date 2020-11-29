@@ -1,6 +1,6 @@
 import numpy as np
 
-from Code.physical_functions import gravforce
+from code.physical_functions import gravforce
 
 
 def update_all_positions(delta_t, selected_objects):

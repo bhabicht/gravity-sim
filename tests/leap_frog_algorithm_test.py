@@ -4,10 +4,10 @@ import sys
 
 import scipy.constants as const
 
-from Code.leap_frog_algorithm import update_all_positions
-from Code.leap_frog_algorithm import calculate_all_forces
-from Code.leap_frog_algorithm import update_all_velocities
-from Code.planet_system_creation import Massiveobject
+from code.leap_frog_algorithm import update_all_positions
+from code.leap_frog_algorithm import calculate_all_forces
+from code.leap_frog_algorithm import update_all_velocities
+from code.planet_system_creation import Massiveobject
 
 sys.path.append('/home/benjamin/Documents/computer_science/gravity-sim')
 

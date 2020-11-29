@@ -2,8 +2,8 @@ import unittest
 import scipy.constants as const
 import sys
 
-from Code.physical_functions import gravpot
-from Code.physical_functions import gravforce
+from code.physical_functions import gravpot
+from code.physical_functions import gravforce
 
 sys.path.append('/home/benjamin/Documents/computer_science/gravity-sim')
 

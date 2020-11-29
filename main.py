@@ -1,8 +1,8 @@
 import numpy as np
 
-from Code.plotting import plot3D
-from Code.leap_frog_algorithm import leapfrog_nsteps
-from Code.planet_system_creation import sun, mercury, venus, earth, mars
+from code.plotting import plot3D
+from code.leap_frog_algorithm import leapfrog_nsteps
+from code.planet_system_creation import sun, mercury, venus, earth, mars
 
 
 delta_t = 60*60*24  # a day in seconds
