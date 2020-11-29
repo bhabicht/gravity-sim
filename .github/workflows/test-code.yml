@@ -26,7 +26,7 @@ jobs:
     - name: Test code
       run: |
         coverage run --source=. -m unittest discover -s tests -p '*_test.py'
-        coverage xml -o /github/workspace/coverage.xml
+        sudo coverage xml -o /github/workspace/coverage.xml
     - uses: actions/checkout@master
     - name: Upload report to codacy
       uses: codacy/codacy-coverage-reporter-action@master
