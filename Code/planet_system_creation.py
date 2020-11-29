@@ -2,6 +2,7 @@ import numpy as np
 
 
 class Massiveobject(object):
+
     """
     Representation of a physical object.
 

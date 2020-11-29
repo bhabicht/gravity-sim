@@ -3,8 +3,7 @@ import scipy.constants as const
 
 
 def gravforce(x1,x2,m1,m2):
-    """
-    Calculate the gravitational force.
+    """Calculate the gravitational force.
 
     This function returns the value of the gravitational force, in SI units,
     acting on the first object and caused by the second object, using
@@ -18,8 +17,7 @@ def gravforce(x1,x2,m1,m2):
     return -const.G*m1*m2/np.linalg.norm(x1-x2)**3*(x1-x2)
 
 def gravpot(x1,x2,m1,m2):
-    """
-    Calculate the gravitational potential.
+    """Calculate the gravitational potential.
 
     This function returns the value of the gravitational potential, in SI units,
     for both particles at positions x1 and x2, caused be the presence of the
