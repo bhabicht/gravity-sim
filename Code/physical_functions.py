@@ -23,7 +23,7 @@ def gravpot(x1,x2,m1,m2):
 
     This function returns the value of the gravitational potential, in SI units,
     for both particles at positions x1 and x2, caused be the presence of the
-    other mass. Input values are the positions of the 2 object in cartesian 
+    other mass. Input values are the positions of the 2 object in cartesian
     coordinates and the masses of the objects
     """
     if np.array_equal(x1, x2):
