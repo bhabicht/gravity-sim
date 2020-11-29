@@ -1,12 +1,10 @@
-name: Test Code automatically
+name: Test Code Automatically
 
 on: [push]
 
 jobs:
-  build:
-
+  test:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.6
@@ -25,4 +23,13 @@ jobs:
         pip install -r  requirements.txt
         pip list
     - name: Test code
-      run: python -m unittest discover -s tests -p '*_test.py'
+      run: |
+        coverage run --source=. -m unittest discover -s tests -p '*_test.py'
+        coverage xml
+    - uses: actions/checkout@master
+    - name: Upload report to codacy
+      uses: codacy/codacy-coverage-reporter-action@master
+      with: 
+        project-token: ${{ secrets.CODACY_API_TOKEN }}
+        coverage-reports: coverage.xml
+            
