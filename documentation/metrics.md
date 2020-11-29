@@ -6,4 +6,4 @@ If will attach a screenshot (TODO).
 As you can see some of the calculated metrics are: Test coverage, SLOC ("Real" Lines of
 Code) and Code quality.  
 Another good property of codacy is that it is very easy to integrate with CI/CD, as you
-can see in my CI/CD documentation [add Link] (TODO)
+can see in my CI/CD documentation (add Link) (TODO)
