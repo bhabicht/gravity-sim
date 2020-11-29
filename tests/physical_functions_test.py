@@ -1,10 +1,12 @@
 import unittest
 import scipy.constants as const
 import sys
-sys.path.append('/home/benjamin/Documents/computer_science/gravity-sim')
 
 from Code.physical_functions import gravpot
 from Code.physical_functions import gravforce
+
+sys.path.append('/home/benjamin/Documents/computer_science/gravity-sim')
+
 
 class TestGravpot(unittest.TestCase):
     def test_gravpot_success(self):
@@ -19,6 +21,7 @@ class TestGravpot(unittest.TestCase):
             str(exception_context.exception),
             "Division by 0 Error"
         )
+
 
 class TestGravforce(unittest.TestCase):
     def test_gravforce_success(self):

@@ -2,7 +2,7 @@ import numpy as np
 
 from Code.physical_functions import gravforce
 
-# 1. update all positions
+
 def update_all_positions(delta_t, selected_objects):
     """
     Update the coordinates.
@@ -13,7 +13,7 @@ def update_all_positions(delta_t, selected_objects):
     for m_obj in selected_objects:
         m_obj.x = m_obj.x + m_obj.v * delta_t/2
 
-# 2. calculate the force acting on each massive object
+
 def calculate_all_forces(selected_objects):
     """
     Calculate sum of all forces.
@@ -32,11 +32,12 @@ def calculate_all_forces(selected_objects):
                 m_obj1.F += gravforce(m_obj1.x, m_obj2.x, m_obj1.mass,
                                       m_obj2.mass)
 
-# 3. calculate new velocities
+
 def update_all_velocities(delta_t, selected_objects):
     """Update all the velocities."""
     for m_obj in selected_objects:
         m_obj.v = m_obj.v + m_obj.F/m_obj.mass * delta_t
+
 
 def leapfrog_nsteps(nsteps, delta_t, selected_objects, x, v):
     """
@@ -46,12 +47,12 @@ def leapfrog_nsteps(nsteps, delta_t, selected_objects, x, v):
     velocities vectors of all objects and for every time step
     """
     for i in range(nsteps):
-        j=0
+        j = 0
         update_all_positions(delta_t, selected_objects)
         calculate_all_forces(selected_objects)
         update_all_velocities(delta_t, selected_objects)
         update_all_positions(delta_t, selected_objects)
         for m_obj in selected_objects:
-            x[i,j]=m_obj.x
-            v[i,j]=m_obj.v
+            x[i, j] = m_obj.x
+            v[i, j] = m_obj.v
             j += 1
