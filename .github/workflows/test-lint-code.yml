@@ -1,4 +1,4 @@
-name: Test & Lint Code Automatically
+name: CI/CD
 
 on: [push]
 
