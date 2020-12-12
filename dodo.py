@@ -40,6 +40,6 @@ def task_dependency():
     """create a dependency graph as .svg"""
     return {
         "actions": [
-            'pydeps --noshow -o documentation/code.svg code'
+            'pydeps --noshow -T png -o documentation/UML/code.png code'
         ]
     }
