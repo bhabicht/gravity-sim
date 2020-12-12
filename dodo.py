@@ -34,3 +34,12 @@ def task_html():
             'pdoc --html --output-dir documentation code --force'
         ]
     }
+
+
+def task_dependency():
+    """create a dependency graph as .svg"""
+    return {
+        "actions": [
+            'pydeps --noshow -o documentation/code.svg code'
+        ]
+    }
