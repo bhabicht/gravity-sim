@@ -29,7 +29,7 @@
 <pre><code class="python">import numpy as np
 
 
-class Massiveobject(object):
+class Massiveobject:
 
     &#34;&#34;&#34;
     Representation of a physical object.
@@ -46,6 +46,34 @@ class Massiveobject(object):
         self.x = x
         self.v = v
         self.F = F
+
+
+class Planet(Massiveobject):
+
+    &#34;&#34;&#34;
+    Representation of a planet.
+
+    Inherit all properties of the Massiveobject class.
+    Then add the properties radius and orbital period.
+    &#34;&#34;&#34;
+    def __init__(self, name, mass, x, v, F, radius, period):
+        super().__init__(name, mass, x, v, F)
+        self.radius = radius
+        self.period = period
+
+
+class Rocket(Massiveobject):
+
+    &#34;&#34;&#34;
+    Representation of a rocket.
+
+    Inherit all properties of the Massiveobject class.
+    Then add the properties length and number of passengers.
+    &#34;&#34;&#34;
+    def __init__(self, name, mass, x, v, F, length, passengers):
+        super().__init__(name, mass, x, v, F)
+        self.length = length
+        self.passengers = passengers
 
 
 # create objects
@@ -160,7 +188,7 @@ which governs the motion of the planets</p>
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">class Massiveobject(object):
+<pre><code class="python">class Massiveobject:
 
     &#34;&#34;&#34;
     Representation of a physical object.
@@ -178,6 +206,73 @@ which governs the motion of the planets</p>
         self.v = v
         self.F = F</code></pre>
 </details>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="code.planet_system_creation.Planet" href="#code.planet_system_creation.Planet">Planet</a></li>
+<li><a title="code.planet_system_creation.Rocket" href="#code.planet_system_creation.Rocket">Rocket</a></li>
+</ul>
+</dd>
+<dt id="code.planet_system_creation.Planet"><code class="flex name class">
+<span>class <span class="ident">Planet</span></span>
+<span>(</span><span>name, mass, x, v, F, radius, period)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Representation of a planet.</p>
+<p>Inherit all properties of the Massiveobject class.
+Then add the properties radius and orbital period.</p>
+<p>Set values for name, mass, place, velocity and force.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Planet(Massiveobject):
+
+    &#34;&#34;&#34;
+    Representation of a planet.
+
+    Inherit all properties of the Massiveobject class.
+    Then add the properties radius and orbital period.
+    &#34;&#34;&#34;
+    def __init__(self, name, mass, x, v, F, radius, period):
+        super().__init__(name, mass, x, v, F)
+        self.radius = radius
+        self.period = period</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="code.planet_system_creation.Massiveobject" href="#code.planet_system_creation.Massiveobject">Massiveobject</a></li>
+</ul>
+</dd>
+<dt id="code.planet_system_creation.Rocket"><code class="flex name class">
+<span>class <span class="ident">Rocket</span></span>
+<span>(</span><span>name, mass, x, v, F, length, passengers)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Representation of a rocket.</p>
+<p>Inherit all properties of the Massiveobject class.
+Then add the properties length and number of passengers.</p>
+<p>Set values for name, mass, place, velocity and force.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Rocket(Massiveobject):
+
+    &#34;&#34;&#34;
+    Representation of a rocket.
+
+    Inherit all properties of the Massiveobject class.
+    Then add the properties length and number of passengers.
+    &#34;&#34;&#34;
+    def __init__(self, name, mass, x, v, F, length, passengers):
+        super().__init__(name, mass, x, v, F)
+        self.length = length
+        self.passengers = passengers</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="code.planet_system_creation.Massiveobject" href="#code.planet_system_creation.Massiveobject">Massiveobject</a></li>
+</ul>
 </dd>
 </dl>
 </section>
@@ -197,6 +292,12 @@ which governs the motion of the planets</p>
 <ul>
 <li>
 <h4><code><a title="code.planet_system_creation.Massiveobject" href="#code.planet_system_creation.Massiveobject">Massiveobject</a></code></h4>
+</li>
+<li>
+<h4><code><a title="code.planet_system_creation.Planet" href="#code.planet_system_creation.Planet">Planet</a></code></h4>
+</li>
+<li>
+<h4><code><a title="code.planet_system_creation.Rocket" href="#code.planet_system_creation.Rocket">Rocket</a></code></h4>
 </li>
 </ul>
 </li>

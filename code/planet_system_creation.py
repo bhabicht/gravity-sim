@@ -1,7 +1,7 @@
 import numpy as np
 
 
-class Massiveobject(object):
+class Massiveobject:
 
     """
     Representation of a physical object.
@@ -18,6 +18,34 @@ class Massiveobject(object):
         self.x = x
         self.v = v
         self.F = F
+
+
+class Planet(Massiveobject):
+
+    """
+    Representation of a planet.
+
+    Inherit all properties of the Massiveobject class.
+    Then add the properties radius and orbital period.
+    """
+    def __init__(self, name, mass, x, v, F, radius, period):
+        super().__init__(name, mass, x, v, F)
+        self.radius = radius
+        self.period = period
+
+
+class Rocket(Massiveobject):
+
+    """
+    Representation of a rocket.
+
+    Inherit all properties of the Massiveobject class.
+    Then add the properties length and number of passengers.
+    """
+    def __init__(self, name, mass, x, v, F, length, passengers):
+        super().__init__(name, mass, x, v, F)
+        self.length = length
+        self.passengers = passengers
 
 
 # create objects
