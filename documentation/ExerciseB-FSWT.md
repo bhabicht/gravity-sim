@@ -39,16 +39,16 @@ because I like the website a lot, it is easy to use, and focuses on the
 relevant stuff. I used github actions to upload the coverage data automatically  
 to the website.  
 Here are some metrics that are calculated:
-1.  **Issues**:  
+-  **Issues**  
 "Number of lines of code with issues divided by all lines of code"  
 
-2.  **Complexity**:  
+-  **Complexity**  
 "Number of complex lines of code divided by all lines of code"  
 
-3.  **Duplication**:  
+-  **Duplication**  
 "% of files with duplication"  
 
-4.  **Test Coverage**:  
+-  **Test Coverage**  
 "% of lines of code tested"  
 
 The test coverage report ist automatically uploaded to codacy using  Github  
@@ -64,21 +64,52 @@ I decided to use the handy build managment tool [doit](https://pydoit.org/). I u
 tasks that need to be done frequent but take some time to type in manually.  
 Therefore I used a [dodo.py](https://github.com/bhabicht/gravity-sim/blob/main/dodo.py) file to define the tasks that I wanted to automate:  
 
-1.  **coverage**:  
+-  **coverage**  
 With this task I can automatically generate a coverage.xml file that is needed  
 to upload the test coverage data to codacy.
 
-2.  **ut**:  
+-  **ut**  
 Here I execute all unit tests.
 
-3.  **lint**:  
+-  **lint**  
 Use flake8 to link every line of code.
 
-4.  **html**:  
+-  **html**  
 Create a html version of the documentation using pdoc. You can see the  
 generated file [here](https://github.com/bhabicht/gravity-sim/blob/main/documentation/code/index.html).
 
-5.  **dependency**:  
+-  **dependency**:  
 Use pydeps to create a dependency graph.
 
 ## 6. Unit Tests
+The unit tests can be found in this [folder](https://github.com/bhabicht/gravity-sim/tree/main/tests).  
+Right now (20.10.2020) the test coverage is 72%. I used the standard python  
+library unittest to do the tests. I included running all tests in my build  
+management und also for CI/CD with Github Actions. This was the first time  
+for me that I wrote tests. I realized they are very useful to ensure that your   
+code is working as intended and gives you much more confidence when refactoring  
+your code.
+
+## 7. Continuous Delivery
+"Continuous Delivery is about keeping your application in a state where it is  
+always able to deploy into production" (Martin Fowler).  
+To ensure that my application is in a state where it is always able to deploy  
+into production I used the tool Github Actions.
+My pipeline as a .yml can be found [here](https://github.com/bhabicht/gravity-sim/blob/main/.github/workflows/test-lint-code.yml).  
+The pipeline is as follows:
+1.  Print the current python version to ensure that 3.6 is used
+2.  Upgrade pip and install the dependencies from [requirements.txt](https://github.com/bhabicht/gravity-sim/blob/main/requirements.txt)
+3.  Run all test, generate coverage.xml, upload report to codacy
+4.  Lint the code with flake8 to ensure PEP8
+## 8. IDE
+I used VSCodium as my IDE because it is very lightweight (and fast!), yet it has a lot of  
+useful functionality. For example it integrates linter tools like flake8 and  
+mypy and pylint. Also it can run all my tests automatically and has really nice  
+git integration (the diffs are really useful). Also useful was that I could  
+specify which virtual environment it should use.
+My favourite keyboard shortcuts are:
+-  Ctrl + Shift + P to open the search
+-  Shift + Alt + F to reformat code
+-  F2 to rename files
+## 9. DSL
+## 10. Functional Programming
