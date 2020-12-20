@@ -6,12 +6,14 @@ code.
 Massiveobject, Planet and Rocket. Planet and Rocket inherit from the base class  
 Massiveobject as you can see in the figure:  
 ![Class diagram](/documentation/UML/InheritanceClassDiagramUML.png)  
+
 2.  Then as a second UML diagram I created a use case diagram to show what you  
 can do with my program. First you can create a planet system, then you can use  
 this system and calculate the trajectories that are given by the physical laws  
 of motion and finally you can plot the resulting trajectory with a 3D plotting  
 tool:  
 ![Use case diagram](/documentation/UML/UseCaseDiagram.png)  
+
 3.  And last but not least I created a dependency graph to show which files use  
 which imports. And you can see that my 3 domains are nicely seperated:  
 ![Dependency graph diagram](/documentation/UML/DependencyGraphUML.png)  
@@ -39,10 +41,13 @@ to the website.
 Here are some metrics that are calculated:
 1.  **Issues**:  
 "Number of lines of code with issues divided by all lines of code"  
+
 2.  **Complexity**:  
 "Number of complex lines of code divided by all lines of code"  
+
 3.  **Duplication**:  
 "% of files with duplication"  
+
 4.  **Test Coverage**:  
 "% of lines of code tested"  
 
@@ -62,14 +67,18 @@ Therefore I used a [dodo.py](https://github.com/bhabicht/gravity-sim/blob/main/d
 1.  **coverage**:  
 With this task I can automatically generate a coverage.xml file that is needed  
 to upload the test coverage data to codacy.
+
 2.  **ut**:  
 Here I execute all unit tests.
+
 3.  **lint**:  
 Use flake8 to link every line of code.
+
 4.  **html**:  
 Create a html version of the documentation using pdoc. You can see the  
 generated file [here](https://github.com/bhabicht/gravity-sim/blob/main/documentation/code/index.html).
+
 5.  **dependency**:  
-Use pydeps to create a dependency graph
+Use pydeps to create a dependency graph.
 
 ## 6. Unit Tests
