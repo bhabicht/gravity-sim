@@ -64,12 +64,12 @@ With this task I can automatically generate a coverage.xml file that is needed
 to upload the test coverage data to codacy.
 2.  **ut**:  
 Here I execute all unit tests.
-3.  **lint**:
+3.  **lint**:  
 Use flake8 to link every line of code.
-4.  **html**:
+4.  **html**:  
 Create a html version of the documentation using pdoc. You can see the  
 generated file [here](https://github.com/bhabicht/gravity-sim/blob/main/documentation/code/index.html).
-5.  **dependency**:
+5.  **dependency**:  
 Use pydeps to create a dependency graph
 
 ## 6. Unit Tests
