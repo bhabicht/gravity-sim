@@ -15,4 +15,4 @@
 9.  DSL
 10.  Functional programming
 
-**Detailed explanations and the solutions to exercise B can be found [here](https://github.com/bhabicht/gravity-sim/blob/main/documentation/ExerciseB-FSWT.md).**
+**Detailed explanations and the solutions to exercise B can be found [here](https://github.com/bhabicht/gravity-sim/blob/main/documentation/ExerciseB-FSWT.md) and the documentation can be found [here]().**

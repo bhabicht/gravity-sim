@@ -36,6 +36,15 @@ def task_html():
     }
 
 
+def task_pdf():
+    """Create a markdown version of the documentation."""
+    return {
+        "actions": [
+            'pdoc --force --output-dir=documentation/docs code'
+        ]
+    }
+
+
 def task_dependency():
     """Create a dependency graph as .png."""
     return {
