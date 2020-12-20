@@ -1,5 +1,5 @@
 def task_coverage():
-    """generate test coverage.xml"""
+    """Generate test coverage.xml."""
     return {
         "actions": [
             'coverage run --source=. -m unittest discover '
@@ -10,7 +10,7 @@ def task_coverage():
 
 
 def task_ut():
-    """execute all unit tests"""
+    """Execute all unit tests."""
     return {
         "actions": [
             'python -m unittest discover -s tests -p "*_test.py"'
@@ -19,7 +19,7 @@ def task_ut():
 
 
 def task_lint():
-    """lint the code with flake8"""
+    """Lint the code with flake8."""
     return {
         "actions": [
             'flake8'
@@ -28,7 +28,7 @@ def task_lint():
 
 
 def task_html():
-    """create a html version of the documentation"""
+    """Create a html version of the documentation."""
     return {
         "actions": [
             'pdoc --html --output-dir documentation code --force'
@@ -37,7 +37,7 @@ def task_html():
 
 
 def task_dependency():
-    """create a dependency graph as .svg"""
+    """Create a dependency graph as .png."""
     return {
         "actions": [
             'pydeps --noshow -T png -o '
