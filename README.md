@@ -10,7 +10,7 @@
 4.  Clean Code Development
 5.  Build Management
 6.  Unit Tests
-7.  Continuous Integration/Delivery
+7.  Continuous Delivery
 8.  IDE
 9.  DSL
 10.  Functional programming
