@@ -57,6 +57,7 @@ class Planet(Massiveobject):
     Then add the properties radius and orbital period.
     &#34;&#34;&#34;
     def __init__(self, name, mass, x, v, F, radius, period):
+        &#34;&#34;&#34;Also set values for radius and period.&#34;&#34;&#34;
         super().__init__(name, mass, x, v, F)
         self.radius = radius
         self.period = period
@@ -71,6 +72,7 @@ class Rocket(Massiveobject):
     Then add the properties length and number of passengers.
     &#34;&#34;&#34;
     def __init__(self, name, mass, x, v, F, length, passengers):
+        &#34;&#34;&#34;Also set values for length and passengers.&#34;&#34;&#34;
         super().__init__(name, mass, x, v, F)
         self.length = length
         self.passengers = passengers
@@ -220,7 +222,7 @@ which governs the motion of the planets</p>
 <div class="desc"><p>Representation of a planet.</p>
 <p>Inherit all properties of the Massiveobject class.
 Then add the properties radius and orbital period.</p>
-<p>Set values for name, mass, place, velocity and force.</p></div>
+<p>Also set values for radius and period.</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
@@ -234,6 +236,7 @@ Then add the properties radius and orbital period.</p>
     Then add the properties radius and orbital period.
     &#34;&#34;&#34;
     def __init__(self, name, mass, x, v, F, radius, period):
+        &#34;&#34;&#34;Also set values for radius and period.&#34;&#34;&#34;
         super().__init__(name, mass, x, v, F)
         self.radius = radius
         self.period = period</code></pre>
@@ -251,7 +254,7 @@ Then add the properties radius and orbital period.</p>
 <div class="desc"><p>Representation of a rocket.</p>
 <p>Inherit all properties of the Massiveobject class.
 Then add the properties length and number of passengers.</p>
-<p>Set values for name, mass, place, velocity and force.</p></div>
+<p>Also set values for length and passengers.</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
@@ -265,6 +268,7 @@ Then add the properties length and number of passengers.</p>
     Then add the properties length and number of passengers.
     &#34;&#34;&#34;
     def __init__(self, name, mass, x, v, F, length, passengers):
+        &#34;&#34;&#34;Also set values for length and passengers.&#34;&#34;&#34;
         super().__init__(name, mass, x, v, F)
         self.length = length
         self.passengers = passengers</code></pre>
