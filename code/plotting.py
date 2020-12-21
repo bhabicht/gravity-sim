@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 
 
 def plot3D(x):
+    """Plot color coded trajectories."""
     cycol = cycle('bgrcmk')
     fig = plt.figure()
     ax = Axes3D(fig)

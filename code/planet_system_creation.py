@@ -29,6 +29,7 @@ class Planet(Massiveobject):
     Then add the properties radius and orbital period.
     """
     def __init__(self, name, mass, x, v, F, radius, period):
+        """Also set values for radius and period."""
         super().__init__(name, mass, x, v, F)
         self.radius = radius
         self.period = period
@@ -43,6 +44,7 @@ class Rocket(Massiveobject):
     Then add the properties length and number of passengers.
     """
     def __init__(self, name, mass, x, v, F, length, passengers):
+        """Also set values for length and passengers."""
         super().__init__(name, mass, x, v, F)
         self.length = length
         self.passengers = passengers
