@@ -31,6 +31,6 @@ def task_html():
     """Create a html version of the documentation."""
     return {
         "actions": [
-            'pdoc --html --output-dir documentation code --force'
+            'pdoc --html --force --output-dir docs code'
         ]
     }
