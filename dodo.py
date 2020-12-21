@@ -34,13 +34,3 @@ def task_html():
             'pdoc --html --output-dir documentation code --force'
         ]
     }
-
-
-def task_dependency():
-    """Create a dependency graph as .png."""
-    return {
-        "actions": [
-            'pydeps --noshow -T png -o '
-            'documentation/UML/DependencyGraphUML.png code'
-        ]
-    }
