@@ -39,16 +39,16 @@ because I like the website a lot, it is easy to use, and focuses on the
 relevant stuff. I used github actions to upload the coverage data automatically  
 to the website.  
 Here are some metrics that are calculated:
--  **Issues**  
+-   **Issues**  
 "Number of lines of code with issues divided by all lines of code"  
 
--  **Complexity**  
+-   **Complexity**  
 "Number of complex lines of code divided by all lines of code"  
 
--  **Duplication**  
+-   **Duplication**  
 "% of files with duplication"  
 
--  **Test Coverage**  
+-   **Test Coverage**  
 "% of lines of code tested"  
 
 The test coverage report ist automatically uploaded to codacy using  Github  
@@ -64,21 +64,21 @@ I decided to use the handy build managment tool [doit](https://pydoit.org/). I u
 tasks that need to be done frequent but take some time to type in manually.  
 Therefore I used a [dodo.py](https://github.com/bhabicht/gravity-sim/blob/main/dodo.py) file to define the tasks that I wanted to automate:  
 
--  **coverage**  
+-   **coverage**  
 With this task I can automatically generate a coverage.xml file that is needed  
 to upload the test coverage data to codacy.
 
--  **ut**  
+-   **ut**  
 Here I execute all unit tests.
 
--  **lint**  
+-   **lint**  
 Use flake8 to link every line of code.
 
--  **html**  
+-   **html**  
 Create a html version of the documentation using pdoc. You can see the  
 generated file [here](https://github.com/bhabicht/gravity-sim/blob/main/documentation/code/index.html).
 
--  **dependency**:  
+-   **dependency**:  
 Use pydeps to create a dependency graph.
 
 ## 6. Unit Tests
@@ -108,8 +108,8 @@ mypy and pylint. Also it can run all my tests automatically and has really nice
 git integration (the diffs are really useful). Also useful was that I could  
 specify which virtual environment it should use.
 My favourite keyboard shortcuts are:
--  Ctrl + Shift + P to open the search
--  Shift + Alt + F to reformat code
--  F2 to rename files
+-   Ctrl + Shift + P to open the search
+-   Shift + Alt + F to reformat code
+-   F2 to rename files
 ## 9. DSL
 ## 10. Functional Programming
