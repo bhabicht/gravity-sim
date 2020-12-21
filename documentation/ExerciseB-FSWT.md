@@ -57,8 +57,33 @@ Or [click here](https://app.codacy.com/gh/bhabicht/gravity-sim/dashboard) to acc
 and thus it made me a better programmer.
 
 ## 4. Clean Code Development
-i need to show 5 points in my code and create a ten point cheat sheet.
+### Ten point cheat sheet
+1.  Functions should do one thing, and they should do it well
+2.  Don't repeat yourself
+3.  Use a coverage tool
+4.  Use descriptive variable names
+5.  One assert per test
+6.  Replace magical numbers with constants
+7.  Explain yourself in code, not in commment
+8.  Leave the code cleaner than when you found it
+9.  Follow Standard Conventions, both language related and team related
+10.  Be consistent  
 
+### Five applications of good coding practices in my code
+Here are 5 examples from my code where you can see that I applied clean coding  
+best practices:
+1.  The first point in my cheat sheet "Functions should do one thing": you can see this in the file [physical_functions](https://github.com/bhabicht/gravity-sim/blob/main/code/physical_functions.py):  
+The function only calculates the gravitational potential.
+```py
+def gravpot(x1, x2, m1, m2):
+    if np.array_equal(x1, x2):
+        raise ValueError("Division by 0 Error")
+    return -const.G*m1*m2/np.linalg.norm(x1-x2)
+```  
+2. Also you can see in this example the principle "Functions should have desc­rip­tives names". The name "gravpot" implies that the gravitational potential is calculated.
+3.  Then as third good coding practice I used a coverage tool. As is explained in chapter 7 Continuous Delivery.
+4. Don't repeat yourself: I followed this priciple as you can see [here](https://app.codacy.com/gh/bhabicht/gravity-sim/dashboard), there is only a 6% code duplication which is quite good.
+5.  Also I tried to explain myself in code, such that comments were not really necessary as you can see in the [main.py](https://github.com/bhabicht/gravity-sim/blob/main/main.py).
 ## 5. Build Management
 I decided to use the handy build managment tool [doit](https://pydoit.org/). I used this tool to automate  
 tasks that need to be done frequent but take some time to type in manually.  
