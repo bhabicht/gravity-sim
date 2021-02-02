@@ -138,3 +138,14 @@ My favourite keyboard shortcuts are:
 -   F2 to rename files
 ## 9. DSL
 ## 10. Functional Programming
+For this topic I need to show that I have covered all functional aspects in my code:
+-   only final data structures
+    - I used immutable data structes whenever it was possible
+-   (mostly) side effect free functions
+    - examples for side effect free functions are the functions in physical_functions.py: gravforce and gravpot
+-   the use of higher-order functions
+    - You can see the use of higher order functions in the class Rocket. Here I used the @staticmethod decorator, which is used to label a class method as a static method. It means that you are able to call this method without instantiating the class first. In general a decorator is something which takes a function as an argument and returns a function with some modification. Thus every decorator is a higher order function.
+-   functions as parameters and return values
+    - an example of a function that returns a function can be seen in the function generalized_gravforce. Here you can specify a parameter, which determines the strength of the gravitation attration and the function returns a function that can be used to calculate the generalized gravitational attration.
+-   use closures / anonymous functions
+    - in generalized_gravforce we do not only return a function but a clojure. A clojure is a function with the context in which it was created.

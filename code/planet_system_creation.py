@@ -49,6 +49,10 @@ class Rocket(Massiveobject):
         self.length = length
         self.passengers = passengers
 
+    @staticmethod
+    def calc_distance(x0, x):
+        return np.linalg.norm(x0-x)
+
 
 # create objects
 # for the masses and positions and velocites I used the website

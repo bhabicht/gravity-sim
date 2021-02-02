@@ -46,6 +46,19 @@ def gravforce(x1, x2, m1, m2):
     return -const.G*m1*m2/np.linalg.norm(x1-x2)**3*(x1-x2)
 
 
+def generalized_gravforce(kappa):
+    &#34;&#34;&#34;
+    Calculate a generalized gravitational force
+
+    The same as gravforce, but gravforce_kappa returns a function that takes as
+    argument a parameter kappa, which determines how strong the gravitational
+    attraction will be.
+    &#34;&#34;&#34;
+    def gravforce_kappa(x1, x2, m1, m2):
+        return -const.G*m1*m2/np.linalg.norm(x1-x2)**(kappa+1)*(x1-x2)
+    return gravforce_kappa
+
+
 def gravpot(x1, x2, m1, m2):
     &#34;&#34;&#34;
     Calculate the gravitational potential.
@@ -67,6 +80,31 @@ def gravpot(x1, x2, m1, m2):
 <section>
 <h2 class="section-title" id="header-functions">Functions</h2>
 <dl>
+<dt id="code.physical_functions.generalized_gravforce"><code class="name flex">
+<span>def <span class="ident">generalized_gravforce</span></span>(<span>kappa)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Calculate a generalized gravitational force</p>
+<p>The same as gravforce, but gravforce_kappa returns a function that takes as
+argument a parameter kappa, which determines how strong the gravitational
+attraction will be.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def generalized_gravforce(kappa):
+    &#34;&#34;&#34;
+    Calculate a generalized gravitational force
+
+    The same as gravforce, but gravforce_kappa returns a function that takes as
+    argument a parameter kappa, which determines how strong the gravitational
+    attraction will be.
+    &#34;&#34;&#34;
+    def gravforce_kappa(x1, x2, m1, m2):
+        return -const.G*m1*m2/np.linalg.norm(x1-x2)**(kappa+1)*(x1-x2)
+    return gravforce_kappa</code></pre>
+</details>
+</dd>
 <dt id="code.physical_functions.gravforce"><code class="name flex">
 <span>def <span class="ident">gravforce</span></span>(<span>x1, x2, m1, m2)</span>
 </code></dt>
@@ -143,6 +181,7 @@ coordinates and the masses of the objects</p></div>
 </li>
 <li><h3><a href="#header-functions">Functions</a></h3>
 <ul class="">
+<li><code><a title="code.physical_functions.generalized_gravforce" href="#code.physical_functions.generalized_gravforce">generalized_gravforce</a></code></li>
 <li><code><a title="code.physical_functions.gravforce" href="#code.physical_functions.gravforce">gravforce</a></code></li>
 <li><code><a title="code.physical_functions.gravpot" href="#code.physical_functions.gravpot">gravpot</a></code></li>
 </ul>

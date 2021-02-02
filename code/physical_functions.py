@@ -18,6 +18,19 @@ def gravforce(x1, x2, m1, m2):
     return -const.G*m1*m2/np.linalg.norm(x1-x2)**3*(x1-x2)
 
 
+def generalized_gravforce(kappa):
+    """
+    Calculate a generalized gravitational force
+
+    The same as gravforce, but gravforce_kappa returns a function that takes as
+    argument a parameter kappa, which determines how strong the gravitational
+    attraction will be.
+    """
+    def gravforce_kappa(x1, x2, m1, m2):
+        return -const.G*m1*m2/np.linalg.norm(x1-x2)**(kappa+1)*(x1-x2)
+    return gravforce_kappa
+
+
 def gravpot(x1, x2, m1, m2):
     """
     Calculate the gravitational potential.
