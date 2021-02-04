@@ -144,12 +144,32 @@ For this topic I need to show that I have covered all functional aspects in my c
 
 -   (mostly) side effect free functions
     -   examples for side effect free functions are the functions in physical_functions.py: gravforce and gravpot
+        ```py
+        def gravpot(x1, x2, m1, m2):
+            if np.array_equal(x1, x2):
+                raise ValueError("Division by 0 Error")
+            return -const.G*m1*m2/np.linalg.norm(x1-x2)
+        ```  
 
 -   the use of higher-order functions
     -   You can see the use of higher order functions in the class Rocket. Here I used the @staticmethod decorator, which is used to label a class method as a static method. It means that you are able to call this method without instantiating the class first. In general a decorator is something which takes a function as an argument and returns a function with some modification. Thus every decorator is a higher order function.
-
+        ```py
+        class Rocket(Massiveobject):
+            def __init__(self, name, mass, x, v, F, length, passengers):
+                super().__init__(name, mass, x, v, F)
+                self.length = length
+                self.passengers = passengers
+            @staticmethod
+            def calc_distance(x0, x):
+                return np.linalg.norm(x0-x)
+        ```
 -   functions as parameters and return values
     -   an example of a function that returns a function can be seen in the function generalized_gravforce. Here you can specify a parameter, which determines the strength of the gravitation attration and the function returns a function that can be used to calculate the generalized gravitational attration.
-
+        ```py
+        def generalized_gravforce(kappa):
+            def gravforce_kappa(x1, x2, m1, m2):
+                return -const.G*m1*m2/np.linalg.norm(x1-x2)**(kappa+1)*(x1-x2)
+            return gravforce_kappa
+        ```
 -   use closures / anonymous functions
     -   in generalized_gravforce we do not only return a function but a clojure. A clojure is a function with the context in which it was created.
