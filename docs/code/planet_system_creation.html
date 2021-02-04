@@ -81,8 +81,24 @@ class Rocket(Massiveobject):
     def calc_distance(x0, x):
         return np.linalg.norm(x0-x)
 
+    def setCompany(self, myCompany):
+        self.brand = myCompany
+        return self
 
-# create objects
+    def setNumEngines(self, myNumEngines):
+        self.color = myNumEngines
+        return self
+
+    def setPayloadToLEO(self, myPayloadToLEO):
+        self.kind = myPayloadToLEO
+        return self
+
+
+# create Rocket
+myrocket = Rocket(&#34;SN9&#34;, 180000, 0, 0, 0, 72, 0)
+myrocket.setCompany(&#34;SpaceX&#34;).setNumEngines(28).setPayloadToLEO(&#34;100+ t&#34;)
+
+# create Massiveobjects
 # for the masses and positions and velocites I used the website
 # https://ssd.jpl.nasa.gov/horizons.cgi#top , this is data provided by the NASA
 sun = Massiveobject(&#34;sun&#34;, 1.9885E30,
@@ -279,7 +295,19 @@ Then add the properties length and number of passengers.</p>
 
     @staticmethod
     def calc_distance(x0, x):
-        return np.linalg.norm(x0-x)</code></pre>
+        return np.linalg.norm(x0-x)
+
+    def setCompany(self, myCompany):
+        self.brand = myCompany
+        return self
+
+    def setNumEngines(self, myNumEngines):
+        self.color = myNumEngines
+        return self
+
+    def setPayloadToLEO(self, myPayloadToLEO):
+        self.kind = myPayloadToLEO
+        return self</code></pre>
 </details>
 <h3>Ancestors</h3>
 <ul class="hlist">
@@ -299,6 +327,51 @@ Then add the properties length and number of passengers.</p>
 <pre><code class="python">@staticmethod
 def calc_distance(x0, x):
     return np.linalg.norm(x0-x)</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="code.planet_system_creation.Rocket.setCompany"><code class="name flex">
+<span>def <span class="ident">setCompany</span></span>(<span>self, myCompany)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setCompany(self, myCompany):
+    self.brand = myCompany
+    return self</code></pre>
+</details>
+</dd>
+<dt id="code.planet_system_creation.Rocket.setNumEngines"><code class="name flex">
+<span>def <span class="ident">setNumEngines</span></span>(<span>self, myNumEngines)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setNumEngines(self, myNumEngines):
+    self.color = myNumEngines
+    return self</code></pre>
+</details>
+</dd>
+<dt id="code.planet_system_creation.Rocket.setPayloadToLEO"><code class="name flex">
+<span>def <span class="ident">setPayloadToLEO</span></span>(<span>self, myPayloadToLEO)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setPayloadToLEO(self, myPayloadToLEO):
+    self.kind = myPayloadToLEO
+    return self</code></pre>
 </details>
 </dd>
 </dl>
@@ -329,6 +402,9 @@ def calc_distance(x0, x):
 <h4><code><a title="code.planet_system_creation.Rocket" href="#code.planet_system_creation.Rocket">Rocket</a></code></h4>
 <ul class="">
 <li><code><a title="code.planet_system_creation.Rocket.calc_distance" href="#code.planet_system_creation.Rocket.calc_distance">calc_distance</a></code></li>
+<li><code><a title="code.planet_system_creation.Rocket.setCompany" href="#code.planet_system_creation.Rocket.setCompany">setCompany</a></code></li>
+<li><code><a title="code.planet_system_creation.Rocket.setNumEngines" href="#code.planet_system_creation.Rocket.setNumEngines">setNumEngines</a></code></li>
+<li><code><a title="code.planet_system_creation.Rocket.setPayloadToLEO" href="#code.planet_system_creation.Rocket.setPayloadToLEO">setPayloadToLEO</a></code></li>
 </ul>
 </li>
 </ul>

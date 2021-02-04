@@ -76,8 +76,6 @@ best practices:
 The function only calculates the gravitational potential.
 ```py
 def gravpot(x1, x2, m1, m2):
-    if np.array_equal(x1, x2):
-        raise ValueError("Division by 0 Error")
     return -const.G*m1*m2/np.linalg.norm(x1-x2)
 ```  
 2.  Also you can see in this example the principle "Functions should have desc­rip­tives names". The name "gravpot" implies that the gravitational potential is calculated.
@@ -137,6 +135,12 @@ My favourite keyboard shortcuts are:
 -   Shift + Alt + F to reformat code
 -   F2 to rename files
 ## 9. DSL
+You can find one case of DSL in my code:
+```py
+myrocket.setCompany("SpaceX").setNumEngines(28).setPayloadToLEO("100+ t")
+```
+Here we have an instance of the class Rocket. The values Company, NumEngines and PayloadtoLEO are set to a specific value.
+
 ## 10. Functional Programming
 For this topic I need to show that I have covered all functional aspects in my code:
 -   only final data structures
@@ -146,8 +150,6 @@ For this topic I need to show that I have covered all functional aspects in my c
     -   examples for side effect free functions are the functions in physical_functions.py: gravforce and gravpot
         ```py
         def gravpot(x1, x2, m1, m2):
-            if np.array_equal(x1, x2):
-                raise ValueError("Division by 0 Error")
             return -const.G*m1*m2/np.linalg.norm(x1-x2)
         ```  
 

@@ -53,8 +53,24 @@ class Rocket(Massiveobject):
     def calc_distance(x0, x):
         return np.linalg.norm(x0-x)
 
+    def setCompany(self, myCompany):
+        self.brand = myCompany
+        return self
 
-# create objects
+    def setNumEngines(self, myNumEngines):
+        self.color = myNumEngines
+        return self
+
+    def setPayloadToLEO(self, myPayloadToLEO):
+        self.kind = myPayloadToLEO
+        return self
+
+
+# create Rocket
+myrocket = Rocket("SN9", 180000, 0, 0, 0, 72, 0)
+myrocket.setCompany("SpaceX").setNumEngines(28).setPayloadToLEO("100+ t")
+
+# create Massiveobjects
 # for the masses and positions and velocites I used the website
 # https://ssd.jpl.nasa.gov/horizons.cgi#top , this is data provided by the NASA
 sun = Massiveobject("sun", 1.9885E30,
